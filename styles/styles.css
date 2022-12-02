@@ -1,0 +1,175 @@
+/*
+    Importing fonts 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400&display=swap');
+
+
+/*
+    Setting up custom color variables
+*/
+:root {
+    --very-light-gray: hsl(0, 0%, 95%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: auto;
+    height: 100vh;
+    background-color: var(--very-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-card {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1em;
+}
+
+img {
+    margin-top: 5%;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: .9em;
+    color: var(--transparent-white);
+    line-height: 1.9;
+    margin: 0 1.5em 7em 1.8em;
+    width: 76%;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--very-light-gray);
+}
+
+img, h1 {
+    padding-left: 8%;
+}
+
+.car-card a {
+    font-family: "lexend deca";
+    text-decoration: none;
+    padding: 1em 2em;
+    color: hsl(31, 77%, 52%);
+    background-color: var(--transparent-white);
+    border: solid 1.5px var(--transparent-white);
+    border-radius: 35px;
+    margin: 0 0 1em 2em;
+}
+
+/* 
+    Assigning each card its color
+*/
+
+.car-card:nth-child(1) a{
+    color: hsl(31, 77%, 52%);
+}
+
+.car-card:nth-child(2) a{
+    color: hsl(184, 100%, 22%)
+}
+
+.car-card:nth-child(3) a{
+    color: hsl(179, 100%, 13%)
+}
+
+
+/*
+    Hover States for each button
+*/
+.car-card:nth-child(1) a:hover {
+    color: var(--transparent-white);
+    background-color: hsl(31, 77%, 52%);
+}
+
+.car-card:nth-child(2) a:hover {
+    color: var(--transparent-white);
+    background-color: hsl(184, 100%, 22%);
+}
+
+.car-card:nth-child(3) a:hover {
+    color: var(--transparent-white);
+    background-color: hsl(179, 100%, 13%);
+}
+
+
+/*
+    Adjusting the card to each screen resolution or device
+*/
+@media (min-width: 780px) { 
+    .main-card {
+        display: flex;
+        align-items: center;
+        width: 860px;
+        height: 450px;
+        margin: 0 auto;
+    }
+
+    .car-card:nth-child(1) {
+        background-color: hsl(31, 77%, 52%);
+        border-radius: 10px 0 0 10px;
+    }
+
+    .car-card:nth-child(2){
+        background-color: hsl(184, 100%, 22%);
+    }
+
+    .car-card:nth-child(3){
+        background-color: hsl(179, 100%, 13%);
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+@media (max-width: 740px) {
+
+    .container{
+        width: auto;
+        height: 170vh;
+        background-color: var(--very-light-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-card {
+        display: flex;
+        flex-direction: column;
+        width: 290px;
+        height: 1440px;
+    }
+
+    p {
+        margin: 0 1.5em 5em 1.8em;
+    }
+
+    .car-card:nth-child(1) {
+        background-color: hsl(31, 77%, 52%);
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .car-card:nth-child(2) {
+        background-color: hsl(184, 100%, 22%);
+    }
+    
+    .car-card:nth-child(3){
+        background-color: hsl(179, 100%, 13%);
+        border-radius: 0 0 10px 10px;
+    }
+}
